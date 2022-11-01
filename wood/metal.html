@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veev's Assignment</title>
+    <meta
+      name="description"
+      content="A responsive folded flyer-like restaurant menu with some 3D"
+    />
+    <meta
+      name="keywords"
+      content="css3, perspective, 3d, jquery, transform3d, responsive, template, restaurant, menu, leaflet, folded, flyer, concept"
+    />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway:300,500|Arvo:700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+    <!--[if lte IE 8
+      ]><style>
+        .support-note .note-ie {
+          display: block;
+        }
+      </style><!
+    [endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <!-- Codrops top bar -->
+      <div class="codrops-top">
+        <a href="http://tympanus.net/Tutorials/BigVideoSlideshow/">
+          <strong>&laquo; Previous Demo: </strong>Fullscreen Video Slideshow
+          with BigVideo.js
+        </a>
+        <span class="right">
+          <a
+            href="http://www.flickr.com/photos/hisgett/369087090/sizes/m/in/photostream/"
+            >Restaurant image by ahisgett</a
+          >
+          <a href="http://tympanus.net/codrops/?p=11029">
+            <strong>Back to the Codrops Article</strong>
+          </a>
+        </span>
+      </div>
+      <!--/ Codrops top bar -->
+
+      <header>
+        <h1>3D Restaurant Menu Concept</h1>
+        <h2>
+          A responsive folded flyer-like restaurant menu with some 3D, featuring
+          recipes from Michael Natkin from
+          <a href="http://herbivoracious.com/">herbivoracious.com</a>
+          <span class="demo-note"
+            >Your current viewport size shows the simplified version</span
+          >
+        </h2>
+
+        <div class="support-note">
+          <!-- let's check browser support with modernizr -->
+          <span class="no-cssanimations"
+            >CSS animations are not supported in your browser</span
+          >
+          <span class="no-csstransforms"
+            >CSS transforms are not supported in your browser</span
+          >
+          <span class="no-csstransforms3d"
+            >CSS 3D transforms are not supported in your browser</span
+          >
+          <span class="no-csstransitions"
+            >CSS transitions are not supported in your browser</span
+          >
+          <span class="note-ie">Sorry, only modern browsers.</span>
+        </div>
+      </header>
+
+      <section class="main">
+        <div id="rm-container" class="rm-container">
+          <div class="rm-wrapper">
+            <div class="rm-cover">
+              <div class="rm-front">
+                <div class="rm-content">
+                  <div class="rm-logo"></div>
+                  <h2>Introduction to Materials</h2>
+                  <h3>Fine Dining &amp; Gourmet Takeaway</h3>
+
+                  <a href="#" class="rm-button-open">View Assignment</a>
+                  <div class="rm-info">
+                    <p>
+                      <strong>Veevaa Bajaj</strong><br />
+                      Year - I<br />
+                      NIFT SXR<br />
+                      <strong>Phone</strong>+91 8491031153<br />
+                      <strong>Email </strong> veevb4@gmail.com
+                    </p>
+                  </div>
+                </div>
+                <!-- /rm-content -->
+              </div>
+              <!-- /rm-front -->
+
+              <div class="rm-back">
+                <div class="rm-content">
+                  
+                  </dl>
+                  <h4 style="font-size: 22px;">Wood Carving</h4>
+                  <br />
+                  <dl>
+					<dt>
+						<a
+						  href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+						  class="rm-viewdetails"
+						  data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+						  >What is wood carving?</a
+						>
+					  </dt>
+					  <dd style="display: None">
+						Whittling is basic wood carving technique Whittlers mostly
+						use softwoods such as Pine, Balsa, or Basswood as they are
+						easier to work with. You will need a sharp whittling knife
+						to carve sharp pebble stone and leather strop to sharp the
+						knife
+					  </dd>
+					</dl>
+					<dl>
+						<br>
+						<h4>Types of wood carving</h4>
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >1. Whittling</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      Whittling is basic wood carving technique Whittlers mostly
+                      use softwoods such as Pine, Balsa, or Basswood as they are
+                      easier to work with. You will need a sharp whittling knife
+                      to carve sharp pebble stone and leather strop to sharp the
+                      knife
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >2. Chip carving</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      It’s done on a flat piece of wood where you remove small
+                      chips to create decorative, aesthetically pleasing
+                      designs. Most people use basic tools such as a cutting and
+                      stab knife for chip carving, although others also use
+                      chisels and gouges
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >3. Flat-plane Carving</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      Flat-plane carving is a unique wood carving technique used
+                      to create figures. This carving style is quite minimalist
+                      and comes from Scandinavia, where people have been
+                      creating household items and toys with the technique for
+                      centuries. Tools and equipments used : Cutting knife,
+                      gouges
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >4. Relief Carving</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      Relief Carving is a wood carving technique where
+                      woodcarvers create reliefs with designs that look
+                      three-dimensional while still being on a flat plane.
+                      Chisels, gouges, mallet are used
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >5. Chainsaw Carving</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      Chainsaw carving is a carving style where you use a
+                      chainsaw to carve large wood sculptures with a chainsaw.
+                      chainsaw carving can be well-paid if you use high-end
+                      materials and create distinctive pieces.
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >6. Pyrography</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      Pyrography is the art of decorating wood with burn marks
+                      using a heated object like a metal pen. The meaning of the
+                      word pyrography is “writing with fire 🔥”
+                    </dd>
+                  </dl>
+				  <br>
+                  <h4> Tools used in carving</h4>
+				  <br>
+                  <dl>
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >The V-Tool</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      Some carvers say that the V-tool is just two chisels
+                      joined to form a V. But the primary function of this tool
+                      is to separate areas when outlining, adding detail,
+                      texturing, it is also known as parting tool. The
+                      difference between the V and the gouge, is that the V
+                      gives you a wall rather than a valley.
+                    </dd>
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >CARVING KNIVES</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      knife can be used to trace an outline on wood, carve out
+                      pieces of many sizes, or add details. they are versatile
+                    </dd>
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >WOOD CARVING MALLET</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      mallet is used to hit the end of chisels, gouges, veiners,
+                      . enable you to make deeper cuts on wod hat are not soft
+                    </dd>
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >CHISELS</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      Chisels have different tips, depending on the size and
+                      shape of cut you wish to make.
+                    </dd>
+                    <dt>
+                      <a
+                        href="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        class="rm-viewdetails"
+                        data-thumb="https://image.shutterstock.com/image-photo/word-demo-appearing-behind-torn-260nw-1782295403.jpg"
+                        >GOUGES</a
+                      >
+                    </dt>
+                    <dd style="display: None">
+                      A gouge has a similar handle to a chisel and uses a
+                      similar motion when carving, but the tip is rounded.
+                      Gouges “scoop” out the wood when pushed or hit with a wood
+                      carving mallet . They can be used to hollow out small or
+                      large sections or to create curves in the wood the veiner
+                      has longer sides, It is also called a U-Gouge. it creates
+                      a hollowed-out “vein,” or thin groove, It’s great for
+                      lines and small details Large U-gouges are called
+                      “fluters” and are used to carve large grooves or “flutes”
+                    </dd>
+		
+                  </dl>
+				  <br>
+				  <div class="rm-order">
+                    <p>
+                      <strong>Would you like to know more about Wood?</strong>
+                      You can download the pdf from here <a href="/">Click me</a>
+                    </p>
+                  </div>
+			
+
+                </div>
+                <!-- /rm-content -->
+                <div class="rm-overlay"></div>
+              </div>
+              <!-- /rm-back -->
+            </div>
+            <!-- /rm-cover -->
+
+            <div class="rm-middle">
+              <div class="rm-inner">
+                <div class="rm-content">
+					<h4 style="font-size: 22px;">Wood Cutting</h4>
+					<br>
+					<dl>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >What is Wood Cutting?</a
+						>
+					  </dt>
+					  <dd style="display: none;">A wood cutter can either be a tool that cuts wood or a person that cuts wood, otherwise known as a lumberjack</dd>
+					  <br>
+					  <h4>Types of wood cutting</h4>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Crosscut</a
+						>
+					  </dt>
+					  <dd style="display: none;">A wood cutter can either be a tool that cuts wood or a person that cuts wood, otherwise known as a lumberjack</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Rip cut</a
+						>
+					  </dt>
+					  <dd style="display: none;">it slices along the grain direction
+  
+						  best saw can be table saw</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Resawing</a
+						>
+					  </dt>
+					  <dd style="display: none;">t is sawing boards along their edges to make them thinner 
+  
+						  best tool can be band saw with gripper</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >miter cut</a
+						>
+					  </dt>
+					  <dd style="display: none;">any cut at an angle other that 90 degrees
+  
+						  miter saw n table saws n jigsaws  can be used</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Bevel cut</a
+						>
+					  </dt>
+					  <dd style="display: none;">A bevel cut refers to a cut with sharp edges that are not perpendicular to the top . The angle is usually measured against a square-edge cut.</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Curved cut</a
+						>
+					  </dt>
+					  <dd style="display: none;">bandsaw (limited to width of wood) or jigsaw can be used for curved cutting</dd>
+                  </dl>
+				  <h4>Tools used for Cutting</h4>
+					<br>
+					<dl>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Power Saws</a
+						>
+					  </dt>
+					  <dd style="display: none;">they can easily cut significant amount of wood in short duration of time. Power saws have rechargeable battery due to which they are known as electric saws.</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Jig Saw</a
+						>
+					  </dt>
+					  <dd style="display: none;">Jig saw are required when wood piece are cut into curves. They are best suited for cutting curves as well as cutting lines in piece of lumber</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Band Saw</a
+						>
+					  </dt>
+					  <dd style="display: none;">Band saw can cut smooth curves in woods precisely. Band saw comes in both stationary as well as portable versions. Band saws are cheap.</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Circular Saw</a
+						>
+					  </dt>
+					  <dd style="display: none;">They are not best for cutting wood but can be used for other cutting works. They are convenient and portable to use. </dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Table Saw</a
+						>
+					  </dt>
+					  <dd style="display: none;">Table saw are used for cutting large number of various planks and pieces of lumber, they can help in precise cutting. Table saw also helps in cutting many cuts one after another. Table saw are easily carried to job site and reduce the time of cutting significantly. Some table saw have legs like model</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >Hand Saws</a
+						>
+					  </dt>
+					  <dd style="display: none;">These are the traditional as well as basic tools for wood cutting. </dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  ><=> Chisels</a
+						>
+					  </dt>
+					  <dd style="display: none;"> available in various shapes and sizes. They can be used for carving wood by hand which can enable them for creating very fine wood art very simply, sculptures are created using wood chisel . They are usually used for joining or fitting of two pieces together.</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >1 BENCH CHISEL</a
+						>
+					  </dt>
+					  <dd style="display: none;">It gets its name as it is often found sitting on the work bench.meant to be used with a mallot. It is good for chopping and pairing </dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >2. PAIRING CHISEL</a
+						>
+					  </dt>
+					  <dd style="display: none;">have longer blades, are thinner and have longer handles. These are meant to be used with body power . Best for removing really precise amount of wood</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >3. MORTISE CHISEL</a
+						>
+					  </dt>
+					  <dd style="display: none;">It is stronger one.This chisel is meant for making mortises or cutting holes in wood. It is build to be reamed on with a hammer</dd>
+					  <dt>
+						<a
+						  href="http://herbivoracious.com/2009/03/panfried-gnocchi-with-arugula-recipe.html"
+						  class="rm-viewdetails"
+						  data-thumb="images/11.jpg"
+						  >4. CONSTRUCTION CHISEL</a
+						>
+					  </dt>
+					  <dd style="display: none;">Bevel angle is similar to bench chisel.ahirter rhan other chisels. Big striking cap for using hammer </dd>
+					  </dl>
+                </div>
+                <!-- /rm-content -->
+                <div class="rm-overlay"></div>
+              </div>
+              <!-- /rm-inner -->
+            </div>
+            <!-- /rm-middle -->
+
+            <div class="rm-right">
+              <div class="rm-front"></div>
+
+              <div class="rm-back">
+                <span class="rm-close">Close</span>
+                <div class="rm-content">
+                  <h4 style="font-size: 22px;">WOOD FILING</h4>
+                  <dl>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2012/08/crepes-with-roasted-french-plums-yogurt-and-honey.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/5.jpg"
+                        >What is filing?</a
+                      >
+                    </dt>
+                    <dd style="display: none;">
+						A file is used to cut, trim or finish a job .File is made from high carbon steel.mostly a file is used for giving final finishing touches to a job. A wooden handle is fitted on its tang. Teeth are cut on its face and edge so that it can perform the job of cutting. The part having no teeth is called as heel. Thick side of file is called edge and its lower end is known as tip or point.
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2012/05/butterscotch-pudding-with-bittersweet-ganache-and-caramelize-white-chocolate-crunchies-recipe.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/6.jpg"
+                        >Parts of a File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">
+						- Handle
+						- Tang
+						- Heel
+						- Face
+						- Edge
+						- Tip or Point
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2009/12/gateaux-de-crepes-recipe.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/12.jpg"
+                        >Types of File Tools</a
+                      >
+                    </dt>
+                    <dd style="display: none;">
+						Files can be classified into the following categories:
+						1 . On the basis of length
+					   
+					   A file is measured according to its length. This length includes whole file except its tang portion . File of 100 mm to 450 mm length are used.
+					   
+					   2 On the basis of shape
+                    </dd>
+				</dl>
+					<dl>
+				
+						<h4 style="margin-top: 12px;">Types of files</h4>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2009/05/dutch-baby-with-sauteed-apples-giant-ovenbaked-pancakes-recipe.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/10.jpg"
+                        >Flat File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">This file is of rectangular cross-section in shape. It is made slightly tapered both in width and thickness. Double cut teeth are cut on the face and simple-cut teeth are cut on the edge. These are used to reduce flat surface by filing of finishing.</dd>
+
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/08/blueberry-napol.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/7.jpg"
+                        >Round File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">
+						This type of file has a round section. It is used for rubbing or finishing keyhole of small diameter.
+                    </dd>
+
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/09/rings-of-saturn.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/2.jpg"
+                        >Half-round File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">It is a file which is on the side and curved on the other side. Double cut dents are cut on it and like a round file, it is also tapered. With this file, the damaged hole can be set in order again.</dd>
+
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Triangular File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">It is triangular in shape. Its angles are of 60°. Filing of “V” slots job, square and rectangular jobs of above 60° and below 90° angle are done with this file. It is also known as three square files.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Square file</a
+                      >
+                    </dt>
+                    <dd style="display: none;">It is square in shape and is somewhat tapered. Filing of rectangular, square groove, slots and key-way is done with this file.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        > Hand file</a
+                      >
+                    </dt>
+                    <dd style="display: none;">This file is almost similar to the flat file. It is used for filing of internal right angle side of a job. It is also called safe edge file.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Knife edge file</a
+                      >
+                    </dt>
+                    <dd style="display: none;">Its shape is like the edge of a knife. Its thin edge is about 10° angle. It is used for filing small grooves and slots whose angle is less than 60°. It is generally used in the lock industry for making keys.</dd>
+				</dl>
+					<dl>
+					
+						<h4 style="margin-top: 12px;">Classification According to grade</h4>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Rough File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">In this type of file, teeth are of big size and less in number. It is used for cutting soft materials because its cutting is rough. </dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Bastard File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">Teeth of this file are comparatively smaller than those of the rough file. It is used initially to shed metal (through filing) in large quantity. </dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Second-cut File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">This is a file of medium grade. In the filler trade, this file is mostly used to bring the job in the proper size. As compared to the bastard file, filing done with this file makes the surface plain</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Smooth File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">file makes the surface quite plain, in addition to making a job of accurate size through filing.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        > Dead Smooth File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">Its teeth are very close to each other and it rubs off the metal in very little quantity. It is used for bringing shinning on the job after finishing has been done.</dd>
+					</dl>
+					<dl>
+						<h4 style="margin-top: 12px;">Classification of Files On The Basis of Cut</h4>
+					</dt>
+                    <dd style="display: none;">file makes the surface quite plain, in addition to making a job of accurate size through filing.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        > Cross - cut file</a
+                      >
+                    </dt>
+                    <dd style="display: none;">This is file has parallel lines of teeth running diagonally across its face in one direction only. Metal surface is rubbed in little quantity and thus the surface becomes smooth. Therefore it is used for hed material and or finishing.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        >Double-cut File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">This file has two rows of teeth crossing each other at an angle of 40° to 45° and the other row has angles of 70° to 80°. this file cuts metal quickly but it cannot make the surface very smooth. That is why it is generally used for normal filing.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        > Spiral-cut File </a
+                      >
+                    </dt>
+                    <dd style="display: none;">These types of teeth are cut in round or semi-round files. The shape of their teeth is like that of threads.</dd>
+                    <dt>
+                      <a
+                        href="http://herbivoracious.com/2008/04/recipe-atayef.html"
+                        class="rm-viewdetails"
+                        data-thumb="images/9.jpg"
+                        > Rasp-cut File</a
+                      >
+                    </dt>
+                    <dd style="display: none;">This is a file of special thick teeth. These teeth are of triangle shape and are in a bulging state. </dd>
+                  </dl>
+                  
+                </div>
+                <!-- /rm-content -->
+              </div>
+              <!-- /rm-back -->
+            </div>
+            <!-- /rm-right -->
+          </div>
+          <!-- /rm-wrapper -->
+        </div>
+        <!-- /rm-container -->
+      </section>
+    </div>
+    <!-- jQuery if needed -->
+    <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        Menu.init();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,691 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Metal working (1)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0733341d-3ee6-47bd-a73d-59df1ee74142" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_earth_grid.jpg" style="object-position:center 30.000000000000004%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🪙</span></div><h1 class="page-title">Metal working (1)</h1></header><div class="page-body"><p id="09add378-4bc6-4017-9a80-c535df926898" class="">A <strong>metal </strong>is a <a href="https://en.wikipedia.org/wiki/Material">material</a> that, when freshly prepared, polished, or fractured, shows a lustrous appearance, and conducts <a href="https://en.wikipedia.org/wiki/Electrical_resistivity_and_conductivity">electricity</a> and <a href="https://en.wikipedia.org/wiki/Thermal_conductivity">heat</a> relatively well.</p><p id="7e5f3d61-8d7b-48d1-a126-de9bde55db2a" class="">Metals can be divided into three main groups:</p><ul id="d1077cd4-df2c-41df-97f5-68b748333757" class="bulleted-list"><li style="list-style-type:disc">Ferrous (contains iron)</li></ul><ul id="06301746-911e-4619-af5f-299ec288e96b" class="bulleted-list"><li style="list-style-type:disc">Nonferrous (contains no iron)</li></ul><ul id="4d1b6cf8-130d-4f18-9292-d111322fa1a4" class="bulleted-list"><li style="list-style-type:disc">Alloys (contains multiple metals and other elements)</li></ul><p id="43fb436e-feac-4c8f-bcd1-c0c7f2e22efe" class="">
+</p><h2 id="1861a5c3-cf25-40ae-a2a9-2db23780cbd1" class=""><strong>DIFFERENT METAL WORKING TECHNIQUES</strong></h2><p id="2f4b90f9-a8c0-4d47-a965-14756524a573" class="">
+</p><p id="5b9b7828-1339-4c3d-94dc-5ae681606736" class="">
+</p><h3 id="2edd2d78-6753-4c49-bbe7-36328231ae67" class="">A. <strong>SHEET METAL OPERATIONS</strong></h3><h3 id="4605d25a-6e2b-415a-9243-7bc9b2c7ed40" class="">1. <strong>Shearing</strong></h3><p id="3c1cc8e6-8b2f-481e-b20c-ba5b577c9816" class="">It is a cut in a straight line across a strip, sheet or bar. It leaves a lean edge on the piece of metal is sheared or cut. In this operation, a sheet metal workpiece is placed or kept between two dies from one end. And, the punch is hit at the other end of the sheet, producing a shearing effect.</p><p id="ea5a0322-f269-4097-bbdd-48389dac04e1" class="">It has 3 basic stage</p><p id="81e50720-45f7-432a-aac0-b7e7eb1208d2" class="">1. Plastic Deformation</p><p id="6e3ff55d-c5d3-4920-aa2c-fb042148b8b3" class="">When a metal is placed between the upper and lower blades of the shear and pressure is applied, plastic deformation takes place. It extends into metal for about 5 to 40% of metal thickness.
+</p><ol type="1" id="df285db3-9e3f-432a-a108-4f30e599784f" class="numbered-list" start="2"><li> Fracture</li></ol><p id="35c4eaa8-6af7-4adb-affe-366292c4df13" class="">At the point of greatest stress concentration fracture takes place. n 
+</p><ol type="1" id="e94bea29-a1ca-4375-a756-c4f3026fc87f" class="numbered-list" start="3"><li> Shear</li></ol><p id="892362f6-6b56-43ad-b1cd-0ee3b912028c" class="">Small fractures are found and the metal is sheared.</p><p id="ae443ba2-9f62-4779-8f67-e6019c0e168d" class="">
+</p><ol type="1" id="b7d14ca0-e3fd-453d-85f1-9cf468b93c88" class="numbered-list" start="2"><li><strong><strong>Blanking</strong></strong></li></ol><p id="b87cd198-22f2-40d2-977c-8002c5743f97" class="">
+</p><p id="ca6c8fc1-e3a7-480c-acc2-16ec358033fe" class="">
+</p><p id="1e9de122-cb84-4e5a-b934-43939b771995" class="">It is an operation of cutting a whole piece from sheet metal. In which enough scrap is left all around as shown in fig. A punch and die is applied for this type of sheet metal operation</p><p id="8afe42d9-96dd-481f-87e3-f10d3eb383f8" class="">
+</p><ol type="1" id="fd533550-85eb-4316-ba1f-e84f0f1c2044" class="numbered-list" start="3"><li><strong><strong>Punching</strong></strong></li></ol><p id="ddae4ece-59a0-4b55-9215-1522d4be7890" class="">It is an operation of producing circular holes on a sheet of metal by a punch and die. This is the exact opposite of blanking but the operation is nearly the same. A Punch and die are further used here such as blanking operations.</p><p id="4ae38e1d-c7e3-4ab5-85f9-e92f83db590f" class="">
+</p><ol type="1" id="30c652e0-006d-4819-b283-b0e187f4f646" class="numbered-list" start="4"><li><strong><strong> Piercing</strong></strong></li></ol><p id="1130e995-4670-4151-88da-1a0f7ff4d704" class="">Piercing is the process in which desired shape holes are produced in a piece of sheet metal without eliminating any material from the sheet or removing a very small amount of material as shown in the figure. Both punch and die are also applied in this operation. The punch used in the piercing operation is usually bullet-shaped.</p><p id="b06c5604-e1b0-4556-a928-fb1fdef984c5" class="">
+</p><ol type="1" id="2d497892-efc0-4761-aca5-b713251a0c23" class="numbered-list" start="5"><li><strong><strong>Trimming</strong></strong></li></ol><p id="08e46e71-7d47-4676-8aec-a87a4e28ef83" class="">The trimming operation is also known as shaving operation. It is a finishing operation by removing the burrs from the cut edges is taken out in order to make edges smooth and also provide dimensional accuracy.</p><p id="9b3149a9-bfbc-40a9-b4fb-8e7375e31cbc" class="">
+</p><h3 id="89edd9a7-83cf-4d5c-86ef-eb715161374a" class=""><strong> 6. Drawing</strong></h3><p id="3b157b05-cf9e-448a-b63a-3c51ecacc729" class="">It is an operation of producing thin-walled hallows or vessel shaped parts from sheet metal. It can be divided into two categories:</p><ol type="1" id="90bb6c50-2f5a-4977-8fa6-6c614a685255" class="numbered-list" start="1"><li>Deep drawing</li></ol><p id="e6c38a79-3183-4595-8769-a01cac482fbe" class="">The length of depth of the object to be drawn is deeper than its widt</p><ol type="1" id="b622922a-7e10-4fea-9b0e-51afc359a3c3" class="numbered-list" start="2"><li>shallow drawing</li></ol><p id="dc5f339c-c4f5-4ca0-ae4c-458d218d864f" class="">The length of the object to be drawn is less than its width. The examples of drawing are pans, tubes and cams.</p><p id="5a444a51-f1ad-4d37-84b5-772684e645c9" class="">
+</p><ol type="1" id="cb1a3f1c-9b35-45e3-9281-1d1e09d8dad9" class="numbered-list" start="7"><li><strong><strong>Embossing</strong></strong></li></ol><p id="b42f5d46-2ed4-4e91-85ff-c422a2abb3b3" class="">It is the metalworking operation which is used to create raised surfaces or lettering in sheet metal. There is no change in metal thickness during this operation.</p><p id="fdb36e7b-49c4-43a2-9617-61b026b667b6" class="">
+</p><h3 id="3f5fc3c2-6ea2-4645-9521-707222b656da" class="">8. <strong>Bending</strong></h3><h3 id="d4ef6902-836f-4312-9aaf-d9face92e93c" class=""><strong>Types of bending</strong></h3><p id="6c76550b-0b27-44fd-933e-48d14ab06d03" class="">It occurs when forces are applied to localized areas. Here the metal flow is uniform along the bend axis with the inner surface in compression and outer surface in tension.</p><ol type="1" id="639cc8e7-e8db-43fd-b141-271278589585" class="numbered-list" start="1"><li>U-bending</li></ol><ol type="1" id="83958f02-ffdc-4247-9714-b9d2f17a8c38" class="numbered-list" start="2"><li>Edge bending</li></ol><ol type="1" id="e66fd670-2b79-41a3-857e-cd4e185f0ada" class="numbered-list" start="3"><li>V-bending</li></ol><ol type="1" id="fcd799f2-69d7-42d1-90f1-dec123b8cbc8" class="numbered-list" start="4"><li>Offset bending</li></ol><ol type="1" id="1d7a8db6-d062-477c-9bb8-3b1546e470ac" class="numbered-list" start="5"><li>Channel bending</li></ol><p id="33cb54cd-6f67-4aa2-94fe-0d78afecb5bf" class="">
+</p><h3 id="8f25c007-c5a2-4794-a4ea-96e1befde4b9" class=""><strong> 9. Squeezing</strong></h3><p id="b0ca4081-4d07-4b1d-a3f7-7e30bc15fba1" class="">It is a quick and widely used way of forming ductile metals. It has different operations such as sizing, coining, riveting etc.</p><p id="b1f9bdce-f29b-47ad-957d-9f1279d584f8" class="">
+</p><ol type="1" id="c8f494c2-1493-4a94-9d62-f0d9dfe7db66" class="numbered-list" start="1"><li>Sizing</li></ol><p id="7232e972-3841-4040-b97a-d969f3dcb907" class="">Sizing operation is a squeezing operation that reduces the thickness of the metal. The sizing is done in an open die and only the surface where the die and workpiece touch will be sized.</p><ol type="1" id="139c6f74-a3ef-4c32-bdac-35d952e8104d" class="numbered-list" start="2"><li>Coining</li></ol><p id="053d2677-dcaf-4694-a08d-1f59162c2264" class="">It is a process of pressing metal in a die so that it flows into the die space. For example Medals, Coins, and Jewellery.</p><p id="1705e9d3-9c49-424f-94a5-956b31724313" class="">
+</p><h3 id="e5c4713d-ff31-458e-a5c5-4e4964d4ba62" class="">B .  <strong>METAL FORMING PROCESS</strong></h3><p id="9ddf9a44-a5d8-4e0d-ba55-b9ea64079eb2" class="">The products and components created by the different metal shaping processes are used in creating everything from scaffolding and heavy machinery to designing and creating microprocessors and artificial intelligence.</p><p id="a25a8a9b-07ef-453f-8377-0828995c11fd" class="">Some of the most common types of metal forming techniques are:</p><p id="bf7a7d60-89f7-4038-8921-f16f1d7f1bdc" class="">
+</p><p id="075303d2-8e5a-45b8-8af0-032bd94f401f" class=""><strong><strong>1.  ROLL FORMING</strong></strong></p><p id="5795f8f9-6b9d-4e6b-a0b8-52ef50504f99" class="">it involves continually feeding a long strip of metal through drum rollers to attain the desired cross-section.</p><p id="e71fce28-4220-4b6d-9cb1-274e8421edb4" class=""><strong><strong>2.  EXTRUSION</strong></strong></p><p id="fdf901d6-0fd6-4d61-aa45-76ecae1b35b4" class="">process that forces metal through the die of the desired cross-section. Aluminum is primarily the extrusion of choice, though most other metals can be used,are relatively affordable</p><p id="281e64fa-a387-4c19-aab7-7bacc84f35e0" class=""><strong><strong>3.  PRESS BRAKING</strong></strong></p><p id="f277cb65-8c71-41b0-a007-8c96acc9e653" class="">involves common sheet metal forming (usually), bending the metal workpiece to a predetermined angle by pinching it between a punch and a die.</p><p id="864ce676-82fc-4781-8ece-08ca36861de5" class=""><strong><strong>4.  STAMPING</strong></strong></p><p id="2632def3-c80f-432d-8df2-68f7af250424" class="">Stamping involves placing a flat metal sheet (or coil) into a stamping press, where a tool and die apply pressure to form the metal into a new shape or cut out a piece of the metal.</p><p id="4601d36b-79b1-47e7-831a-4adc1c206459" class=""><strong><strong>5.  FORGING</strong></strong></p><p id="05f07145-731b-4179-b1dd-2962013bec5d" class="">Forging involves shaping metals using localized, compressive forces after heating the metal to a point where it&#x27;s malleable.</p><p id="0e81d02a-036e-4b53-9f45-ed61b64fe05c" class=""><strong><strong>6.  CASTING</strong></strong></p><p id="e9a0e9b1-89e3-4d4f-bbc4-1de8d963fa1f" class="">Casting is a process that involves pouring liquid metal into a mold containing a hollow cavity of the desired shape.</p><ol type="1" id="c6e90d98-7d94-4d0a-9041-431d062ec2a9" class="numbered-list" start="7"><li><strong><strong>Wire Drawing:</strong></strong></li></ol><p id="4c1bfd8b-6ab4-4d56-83df-34e3d58a14d6" class="">Makes a strong small dia. Wire (hot or cold)</p><p id="b5a11289-d982-4f0d-af54-4565dccb8997" class="">
+</p><h3 id="b178ab54-e734-4c87-9546-4a8796ad3001" class="">C . <strong>METAL CUTTING</strong></h3><p id="1a1b17da-e1db-4519-9051-fdd7ea9d7db0" class="">metal cutting can be quite difficult and intimidating, because out of all the different types of construction materials such as wood, bricks, concrete, metal / steel is the hardest and strongest of them all.</p><ol type="1" id="7da12d18-632d-4bce-9a19-9245ba849e0e" class="numbered-list" start="1"><li><strong><strong>Snips</strong></strong></li></ol><p id="d711c4f5-34da-4b1e-bec4-dc2e106800b7" class="">suitable for cutting thin sheets, so don’t go buy a snip if you’re trying to cut a thick plate, rebar or round bars. It won’t work for those.</p><p id="4786e6f6-5b74-4f85-ab46-0b9d7a2fe548" class="">2 main types of snips which include “Thinner Snips” ,</p><p id="c5d27ca2-74d6-4dc2-bf0f-f8429126eb53" class="">and “Compound Action are the most popular types you’ll find in most workshops. This is because they’re more powerful,They’re also called aviation snips because they were first developed to cut aluminum used in the construction of aircraft</p><p id="ecaf4ce5-6b37-422d-bb1a-82b1d6a18cd6" class="">it comes in 3 cutting styles straight cutting, left cutting and right cutting snips, each identified by the color of their handles.</p><p id="8569910f-e983-45e7-86f1-8eea67261903" class=""> Straight cutting snips usually have yellow handles. They cut straight lines and wide curves both left and right.</p><p id="ce000bea-e84d-477f-b95a-8ff426a1e543" class="">Left cutting snips usually have red handles, and they cut both straight and tight curve lines to the left. </p><p id="5cf1f9bc-cb22-4a84-b963-b7999654a6ba" class="">right cutting snips usually have green handles, and they cut both straight lines and tight curve lines to the right.</p><ol type="1" id="42470284-af68-4b84-8bac-a0545d1131b1" class="numbered-list" start="2"><li><strong><strong>Bolt Cutter</strong></strong></li></ol><p id="feef333d-e841-49d3-98ee-d270172f4881" class="">used for cutting bolts, They are also used for cutting metals of similar thickness and strength such as chains, wire mesh, rebar, padlocks and so on.</p><ol type="1" id="6d1b43f6-1cc0-495e-a058-34ae6c374aba" class="numbered-list" start="3"><li><strong><strong>Metal Shears</strong></strong></li></ol><p id="88795836-c337-4d06-98c5-b46f844a6e18" class="">Metal shears are either hand-powered, compressed air powered or electric powered hand operated tools for cutting sheet metal or aluminum sheets.A little downside is that a little bit of the sheets go to waste, because with each cut, the shears takes off about a quarter each of the material.</p><ol type="1" id="d7aea70a-5e3e-435d-8623-bf52ae645c2a" class="numbered-list" start="4"><li><strong><strong>Hack Saw</strong></strong></li></ol><p id="ba9f1dd4-d31d-42cd-8ba8-2509c6e28b56" class="">A hack saw is one of the most common hand tools used for cutting metal.Hack saws are not just for cutting sheet metal, but for cutting other types of steel supplies like rebars, roun pipes, square pipes, angle bars and so on.</p><ol type="1" id="7aab6e5f-a73b-4f4f-adc9-716d996204df" class="block-color-blue numbered-list" start="5"><li><strong><strong>Reciprocating Saw</strong></strong></li></ol><p id="e970eea9-6c09-4e5c-9606-068272cc0a59" class="">A reciprocating saw is basically a motorized hacksaw. It can be used for cutting different types of materials, including metal of different thicknesses.One main advantage of <a href="https://craftsmanprotools.com/6-reciprocating-saw-uses/">using reciprocating saws</a>
+ is that the blades are pretty flexible, which means they can easily access tiny spaces where other tools fail.</p><ol type="1" id="90d81b59-4f04-4069-b6cb-87494dc2b756" class="numbered-list" start="6"><li><strong><strong>Angle Grinder</strong></strong></li></ol><p id="ad07cd30-25ea-4a6c-a715-11d78a395c56" class="">An angle grinder is one of the most used metal cutting tool you’ll find in different workshops. Its main purpose is for grinding down or removing excess material from a piece using an abrasive disk attached to the spindle.It finds a lot of uses in the workshop because it can be used for cutting different types of steel goods, including sheet goods, rebars, angle iron, round bars, tubing and so on.</p><ol type="1" id="c075da87-8802-4e44-84ee-4112cefb5bab" class="numbered-list" start="7"><li><strong><strong>Metal Cutting Circular Saw</strong></strong></li></ol><p id="58fb613c-cbf8-42fe-a311-d2e0e93152de" class="">Metal cutting circular saws are like cold saws allow the user to carry out spark-free cuts on different types of steel materials.Unlike a regular circular saw, it features a blade shield that collects all the chips and sparks produced when making cuts.can cut different types of steel, including sheet goods, tubing and even thick plates.</p><ol type="1" id="fceedb42-2806-4777-8ab4-b2ed26591fa7" class="numbered-list" start="8"><li><strong><strong>Metal Cutting Horizontal Bandsaw</strong></strong></li></ol><p id="909b8a8d-70e9-471f-9181-c11d62cf1898" class="">Horizontal bandsaws comes with clamps that allow you to hold the workpiece in place while the blade cuts down through the material. Once the cut is made, the blade stops all by itself without intervention.r cutting different types of steel goods like thick round bars, round tubing, square tubing, rectangular tubings, flat bars and so on.Multitasking with a horizontal bandsaw is possible because after the setting up the saw, once it starts cutting a really thick steel bar, you can go on and carry out another task because the saw will stop automatically by itself once it cuts through the bar.</p><ol type="1" id="e4df4fda-7479-4429-a501-49682c74ed73" class="numbered-list" start="9"><li>VERTICAL<strong> Bandsaw</strong></li></ol><p id="fddc7b3f-ca10-47ba-b5b4-f2e8e1716655" class="">Vertical bandsaws are mostly used for cutting non-metallic materials like wood, while horizontal bandsaws are mostly found in fabrication workshop for cutting steel and similar materials.</p><ol type="1" id="95ca014b-994e-44f1-bffe-de157b9ade34" class="numbered-list" start="10"><li><strong><strong>Sheet Metal Nibbler</strong></strong></li></ol><p id="45a3dbdc-95eb-46d5-b6e4-a1f0511f6ab1" class="">nibblers takes little half-moon chunks from it. It kind of nibbles its way through the sheet. And I think that’s where the name came from.</p><p id="8814415b-628d-4218-93ab-8982c4e458b1" class="">When cutting roofing sheets, nibblers are best for cutting across the ribs or channels of the sheet. Whereas, shears are best for cutting along it.</p><ol type="1" id="99d51da7-1a92-4cd9-b2a4-2ab832be1787" class="numbered-list" start="11"><li><strong><strong>Chop Saw</strong></strong></li></ol><p id="fd055c33-384c-4195-b432-8b078ba0a144" class="">It’s basically a tool for crosscutting not ripping through materials.as long it’s not aluminum, chops saws will crosscut through most types of steel supplies including tubing, round bars, angle iron, rebars and so on.</p><ol type="1" id="ffe7ccf9-d544-44f1-ae9d-dd3359c81b49" class="numbered-list" start="12"><li>DRILL</li></ol><p id="c58a0a50-9274-466a-b0b8-ee65639b4a06" class="">It is a cutting tool . Used to cut cylindrical hole on workpiece. Generally it is made of high speed steel , if the material is hard we use carbide also.</p><p id="428c8076-105a-44b5-b7e2-0ddaea4db5b5" class="">TYPES OF DRILLS </p><p id="9efd5d64-ccc6-4bd2-a387-3e86288a5bca" class=""> According to structure</p><ol type="1" id="9405ec65-aff3-47be-8bed-6ac159531b3d" class="numbered-list" start="1"><li>FLAT DRILL</li></ol><ol type="1" id="777010c1-eacd-4bb3-9d08-204b4514e54b" class="numbered-list" start="2"><li>TWIST FLUTED DRILL</li></ol><ol type="1" id="953905d8-f565-4706-953c-d7e83705e4fa" class="numbered-list" start="3"><li>STRAIGHT FLUTED DRILL</li></ol><p id="e9eb7422-7973-4e50-b3fd-b9fbae8971a7" class="">According to shank</p><ol type="1" id="1be5b808-b63d-4280-a81d-a47b8d20f97b" class="numbered-list" start="1"><li>STRAIGHT SHANK</li></ol><ol type="1" id="01a29161-f47e-4dee-a335-3f587a859f57" class="numbered-list" start="2"><li>TAPER SHANK</li></ol><ol type="1" id="704a9e86-7130-4fb2-82c2-8b6aa3a2e58c" class="numbered-list" start="3"><li>RATCHET SHANK</li></ol><ol type="1" id="7df10821-bbe5-457c-8917-fc9af958bce6" class="numbered-list" start="4"><li>BIT SHANK</li></ol><p id="7b750604-28f0-4904-bd6e-71595e601c72" class="">Special kind of drills</p><ol type="1" id="9666170c-24fc-4d89-91e5-a232d1e74e76" class="numbered-list" start="1"><li>DOUBLE FLUID DRILL</li></ol><ol type="1" id="5ded9ad1-dab0-4a56-bd3f-bad407a07db8" class="numbered-list" start="2"><li>MUTLI FLUID DRILL</li></ol><ol type="1" id="3630ca50-d1d8-40ba-a683-436f52c680b3" class="numbered-list" start="3"><li>CENTER DRILL</li></ol><ol type="1" id="bcdc991e-b9e6-4c71-9a6c-efcc7d3821a1" class="numbered-list" start="4"><li>COUNTER SHANK DRILL</li></ol><ol type="1" id="ad837afe-8816-4226-a9fc-f9d108d27e0e" class="numbered-list" start="5"><li>COUNTING BORING DRILL</li></ol><ol type="1" id="de06d667-473f-4059-9a6c-a4f9437cd76a" class="numbered-list" start="6"><li>OIL HOLE DRILL</li></ol><ol type="1" id="b6b1a296-b037-4763-b91b-cb53cd8f1cb2" class="numbered-list" start="7"><li>SPIRIC DRILL</li></ol><ol type="1" id="7b1577bf-4159-43f0-9d7e-d6959d6e5b05" class="numbered-list" start="8"><li>SHELL DRILL</li></ol><ol type="1" id="c43610b0-91ec-493d-a39f-d6f6f8a7f08d" class="numbered-list" start="9"><li>STEP DRILL</li></ol><ol type="1" id="1877c707-d2d8-494a-93f5-bfd10eaf2b4e" class="numbered-list" start="10"><li></li></ol><p id="a7537fcf-5a42-49d4-8f11-30e4040ece32" class="">D. <strong>METAL FILING SAME AS WOOD</strong></p><p id="c4868a91-c1d6-4fbc-b910-8b47b4143755" class="">https://www.theengineerspost.com/types-of-file-tools/</p><p id="b16d7c99-5fc1-413b-a211-780d4cd61a6c" class="">Though some difference between wood files and metal files </p><p id="dfa53bac-c271-41f5-9e30-bf956e647e5b" class="">https://benchmarkabrasives.com/blogs/news/difference-between-wood-file-and-metal-file</p><h3 id="4b33deac-9e08-45a8-9307-391fc608e391" class="">E.  <strong>METAL WIRE TWISTING AND COILING</strong></h3><ol type="1" id="ff48eaba-f4c0-4cee-866a-4e5c380b936e" class="numbered-list" start="1"><li>DRILL</li></ol><p id="debc2a2b-c298-4c70-87cf-88be5ff2ebbe" class="">It is a power tool which is used for making holes in material , it can also be used for coiling and twisting wires  efficiently and quickly</p><p id="d7564664-9ae8-4073-a8fe-8ae25e949349" class="">TWISTING SQUARE WIRE</p><p id="b5fa1b66-b71a-4332-b702-60339c1060fc" class="">Using clamp , short nose plier and drill. This kind of twisting makes wire more stronger and straighter . It can be used for coiling , as a decorative material etc</p><p id="1ad13f0e-4ecb-45d5-a27e-d888c3d8b31e" class="">TWISTING 2 ROUND WIRES</p><p id="7b87fb23-8402-41f1-8ea5-ed5038a8f75f" class="">Using plier to secure those wires together on clamp and putting them in drill</p><p id="d45e592f-c273-4156-b510-b57d74fcaadf" class="">COILING WIRE ON MANDREL</p><p id="402af99d-3154-4f2c-9ab7-9171588c891c" class="">Using knitting needles as mandrel . Putting it in drill alongside wire and pulling trigger very slow while guiding the wire. The coil we get can be used in jewelry design</p><p id="e78566cd-019d-40ad-bd5f-552da35438d5" class="">COILING WIRE ON ANOTHER WIRE AS BASE</p><p id="c59c7cb6-33b5-4735-a648-5fb60717348b" class="">IT is done in wire weaving works . Putting the core wire in drill and secure it.Then wrapping the end of wire in swivel using plier then connecting to clamp to avoid wire from twisting and just <a href="http://rotating.now">rotating.</a>Now putting the other wire in drill next to the core wire and pulling the trigger slowly.</p><p id="026e38a1-1857-4990-befd-e044bc304090" class="">
+</p><ol type="1" id="a8612f84-377a-4e37-a661-3a3eec5539fb" class="numbered-list" start="2"><li>WIRE TWISTING TOOL (MANUAL)</li></ol><p id="ab736594-040c-40b6-bcb9-3a14340309b4" class="">Hand tools are preferred for the control on twisting u can get. Securing the wires as many needed upto 5 in holes and other side securing through clamp we can start rotating  the handle to get the twists.</p><ol type="1" id="ecf9f5eb-b1b6-4f4c-948e-9fa0d07fa337" class="numbered-list" start="3"><li>WIRE TWISTING PLIER</li></ol><p id="d1b30bbd-7174-44de-a026-62b35b97455c" class="">you can use them for thin wires.they have play jaws and handles to close them. At the end there is knob attached to a twisted rod which plays the important role in twisting the wire.After securing the wire in jaws and secure the other end using the clamp or any other suitable tool . then let go of the handles by pulling the knob out ,  repeatedly pull the knob out and let it go until you get the desired twistS.</p><p id="1b09d0c7-bf46-4ed0-8786-6cc9024ccffa" class="">
+</p></div></article></body></html>
